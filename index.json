@@ -18,9 +18,7 @@
     "plugins": [
         "@typescript-eslint",
         "react",
-        "simple-import-sort",
-        "eslint-plugin-react",
-        "unused-imports"
+        "simple-import-sort"
     ],
     "ignorePatterns": [],
     "rules": {
@@ -48,6 +46,9 @@
                     "requireLast": false
                 }
             }
+        ],
+        "@typescript-eslint/no-unused-vars": [
+            "error"
         ],
         "camelcase": [
             "error",
@@ -172,8 +173,11 @@
         "no-multiple-empty-lines": "error",
         "space-before-blocks": "error",
         "comma-spacing": "error",
-        "no-unused-vars": "error",
-        "jsx-quotes": ["error", "prefer-single"],
+        "no-unused-vars": "off",
+        "jsx-quotes": [
+            "error",
+            "prefer-single"
+        ],
         "simple-import-sort/imports": [
             "error",
             {
@@ -192,7 +196,6 @@
                 ]
             }
         ],
-        "unused-imports/no-unused-imports": "error",
         "react/jsx-curly-brace-presence": [
             "error",
             {
